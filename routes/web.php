@@ -11,6 +11,9 @@
 |
 */
 
-$app->get('/', function () use ($app) {
+// $app->get('/', function () use ($app) {
+// });
+
+$app->get('/', ['middleware' => 'cors', function() use ($app) {
     return $app->version();
-});
+}]);

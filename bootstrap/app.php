@@ -23,6 +23,12 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
+
+/*LumeN CORSE*/
+$app->routeMiddleware([
+    'cors' => 'palanik\lumen\Middleware\LumenCors',
+]);
+
 // $app->withFacades();
 
 // $app->withEloquent();
